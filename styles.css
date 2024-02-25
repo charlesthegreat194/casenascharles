@@ -1,0 +1,253 @@
+ 
+ @import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+
+  font-style: normal;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+
+.sub-main {
+    opacity: 0;
+    transform: translateY(-150px);
+    animation: fadeInUp 2s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(-300px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.img-container {
+    opacity: 0;
+    transform: translateY(100px);
+    animation: fadeInDown 2s ease forwards;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(300px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+.gradient-text {
+    /* Apply gradient as text color */
+    background: linear-gradient(to right, #b16cea, #ff5e69, #ff8a56, #ffa84b);
+    -webkit-background-clip: text; /* Clip the gradient to the text */
+    -webkit-text-fill-color: transparent; /* Hide the actual text color */
+}
+
+
+
+body {
+    background-color: #161513;
+}
+.tao{
+    position: relative;
+   
+    
+}
+#main{
+    height: 70vh;
+}
+.sub-main{
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: block; 
+    margin-top: 15em;
+    font-weight: 600;
+    word-spacing: .6em;
+}
+
+.sub-main h1,h2,h3{
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    
+}
+
+#second-sec{
+    background: linear-gradient(to top, #b16cea, #ff5e69, #ff8a56, #ffa84b);
+}
+
+
+h1{
+    color: white;
+    margin-bottom: 1em;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    padding-top: 100px;
+}
+h2{
+    color: linear-gradient(to top, #b16cea, #ff5e69, #ff8a56, #ffa84b);;
+    text-align: center;
+    display: block;
+    margin-bottom: 3em;
+    font-family: "Cookie", cursive;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 40px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Dynamic column sizing */
+    grid-auto-rows: 400px 500px;
+    grid-gap: 5px;
+    grid-auto-flow: dense;
+    height: 50%;
+    
+}
+
+
+.gallery {
+    width: 100%;
+    height: 100%;
+    position: relative;
+   
+}
+
+.gallery .img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-size: cover;
+    margin-bottom: 10px;
+}
+
+.gallery .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Changed object-fit to cover for a better view */
+    object-position: center; /* Center the image */
+    border-radius: 5px;
+    border: 2px solid white;
+    
+}
+.w-1{
+    grid-column: span 1;
+}
+.w-2{
+    grid-column: span 2;
+}
+.w-3{
+    grid-column: span 3;
+}
+.w-5{
+    grid-column: span .5;
+}
+.h-1{
+    grid-row: span 1;
+}
+.h-2{
+    grid-row: span 2;
+}
+.h-3{
+    grid-row: span 3;
+}
+
+
+    .btnholder{
+        
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        padding-top: 3em;
+        padding-bottom: 3em;
+    }
+    .btn1{
+        
+        place-items: center;
+        background-color: transparent;
+        
+        border: 3px transparent;
+        
+     
+    }
+
+@media (max-width: 768px) {
+    #main {
+        height: 50vh; /* Adjusted height for smaller screens */
+    }
+
+    .sub-main {
+        margin-top: 10em; /* Adjusted margin top for smaller screens */
+    }
+
+    .sub-body h1 {
+        margin-bottom: 5em; /* Adjusted margin bottom for smaller screens */
+    }
+    .tao{
+        height: 30vh;
+        padding-right: 10px;
+        bottom: -10px;
+    }
+    h1{
+        font-size: 30px;
+        vertical-align: middle;
+        top: 0;
+        padding-top: 50px ;
+        
+    }
+    h2{
+        
+        font-size: 30px;
+    }
+    .gallery .img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Changed object-fit to cover for a better view */
+        object-position: center;
+    }
+    .container {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Adjusted grid column sizing for phones */
+        grid-auto-rows: 150px 200px;
+      
+    }
+    .h-2{
+        grid-row: span 3;
+    }
+    .h-1{
+        grid-row: span 1;
+    }
+    .w-2{
+        grid-column: span 1;
+    }
+    .w-3{
+        grid-column: span 1;
+    }
+    .w-1{
+        grid-column: span 1;
+    }
+    
+}
+
+
